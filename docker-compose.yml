@@ -1,0 +1,30 @@
+# Indica versao do docker-compose file format
+version: "3.8"
+
+# Indica servicos
+services:
+  
+  # Servico do aplicativo web
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  
+  # Servico para gerir banco de dados
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+# Indicacao dos volumes (persistencia de dados)
+volumes:
+  postgres_data:
+  
