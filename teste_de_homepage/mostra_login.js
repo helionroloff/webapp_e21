@@ -11,10 +11,12 @@ btn.addEventListener('click', function() {
       tela_de_login.style.display = 'none';
       fundo.style.opacity = '1'
       imagens.style.opacity = '1'
+      // setas.style.opacity = '1';
   } else {
       tela_de_login.style.display = 'block';
       fundo.style.opacity = '0.1';
-      imagens.style.opacity = '0.1'
+      imagens.style.opacity = '0.1';
+      // setas.style.opacity = '0.1';
       fundo.style.transition = 'opacity 500ms' ;
       imagens.style.transition = 'opacity 300ms' ;
   }
@@ -28,10 +30,12 @@ xiz.addEventListener('click', function() {
       tela_de_login.style.display = 'none';
       fundo.style.opacity = '1';
       imagens.style.opacity = '1';
+      // setas.style.opacity = '1';
   } else {
       tela_de_login.style.display = 'block';
       fundo.style.opacity = '0.1';
       imagens.style.opacity = '0.1';
+      // setas.style.opacity = '0.1';
       fundo.style.transition = 'opacity 500ms' ;
       imagens.style.transition = 'opacity 300ms' ;
   }

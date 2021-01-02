@@ -5,7 +5,6 @@ var imagem_laptop_da_esquerda = document.querySelectorAll('#img_laptop')
 var imagem_laptop_da_direita = document.querySelectorAll('#img_laptop_2')
 var imagem_laptop_central = document.querySelectorAll('#img_laptop_3')
 
-
 var txt_porquinho = document.querySelectorAll('#txt_porquinho')
 var txt_logar = document.querySelectorAll('#txt_logar_porquinho')
 
@@ -19,12 +18,13 @@ var txt_direita = document.querySelectorAll('#txt_laptop_da_direita')
 var txt_contato = document.querySelectorAll('#txt_contato_laptop_da_direita')
 
 
-let time = 2700,
+let time = 4000,
     currentimageIndex = 0,
     currentTextIndex = 0,
     images = document.querySelectorAll('.bloco_1 img');
     texts = document.querySelectorAll('.bloco_1 h4');
     options = document.querySelectorAll('.bloco_1 h3');
+    setas = document.querySelectorAll('.setas img')
 
     max = images.length;
 
@@ -33,7 +33,8 @@ function nextimage() {
     images[currentimageIndex].classList.remove('selected');
     texts[currentTextIndex].classList.remove('txt_selected');
     options[currentTextIndex].classList.remove('option_selected');
-
+    setas[currentimageIndex].classList.remove('seta_selected');
+    
     
 
 
@@ -50,6 +51,7 @@ function nextimage() {
     images[currentimageIndex].classList.add('selected')
     texts[currentTextIndex].classList.add('txt_selected')
     options[currentTextIndex].classList.add('option_selected')
+    setas[currentimageIndex].classList.add('seta_selected')
 
 }
 
